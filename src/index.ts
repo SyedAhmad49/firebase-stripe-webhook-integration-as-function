@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_51JMcVJGgQs3V8TmTQomhD2360p11zDysecvqRMPCAdkAevd21dq0YbVPNHf62cFeBqcbg7oC8FNLwZ1DWQm9mUWP002UzClIWZ');
+const stripe = require('stripe')('sk_test_xxxxxxxxxxxxxxxxxxxxxxx');
 const express = require('express');
 const app = express();
 const admin = require('firebase-admin')
@@ -165,8 +165,7 @@ const handleInvoicePaid = async (invoice: any) => {
 
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-const endpointSecret = "whsec_4b5448b753575d9917b483d3726e9a0c210a235d8e4b8d897daab1f4b67ef79a";
-// const endpointSecret = "we_1QpnisGgQs3V8TmTHWAD0aVN";
+const endpointSecret = "whsec_xxxxxxxxxxxxxxxxxxxxx";
 app.post('/webhook', async (request:any, response:any) => {
   const sig = request.headers['stripe-signature']
   let event;
